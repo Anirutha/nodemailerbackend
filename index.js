@@ -5,7 +5,6 @@ import cors from "cors";
 import { signUpRouter } from "./routes/singnupUser.js";
 import { loginRouter } from "./routes/loginUser.js";
 import{passwordResetRouter} from "./routes/passwordReset.js";
-import { colorUserrouter } from "./routes/colorUser.js";
 import { MongoConnect } from "./db.js";
 
 dotenv.config();
@@ -24,6 +23,6 @@ app.use(cors());
 app.use("/api/signup", signUpRouter);
 app.use("/api/login",loginRouter); 
 app.use("/api/password-reset",passwordResetRouter); 
-app.use("/api/color-app",colorUserrouter); 
+
 
 app.listen(9000, () => console.log(`Listening to port 9000`)); 
